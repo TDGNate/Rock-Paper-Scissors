@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#ffb3a9), to(#0f0f0f));
+  background-image: linear-gradient(to top, #ffb3a9, #0f0f0f);
+  height: 100vh;
+}
+
+header {
+  display: block;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  -webkit-transition: 250ms ease-in;
+  transition: 250ms ease-in;
+}
+
+header:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+header p {
+  font-size: 1.7rem;
+  padding: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  color: white;
+}
+
+main {
+  width: 100%;
+}
+
+a {
+  color: #fffbc1;
+}
+
+.nate {
+  color: #38a5ff;
+  text-decoration: none;
+}
+
+.nate:hover {
+  border-bottom: 1px solid #38a5ff;
+}
+
+.display {
+  height: 35vh;
+  display: -ms-grid;
+  display: grid;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2rem;
+  -ms-grid-columns: 38% 24% 38%;
+      grid-template-columns: 38% 24% 38%;
+}
+
+.display span {
+  color: white;
+  font-weight: bold;
+  padding: .2rem;
+  border-bottom: 2px solid white;
+}
+
+.display .middle {
+  color: #fdff9d;
+}
+
+.display .middle #message {
+  font-size: 2.5rem;
+  cursor: pointer;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.display .middle #message:hover {
+  color: #fffef2;
+  -webkit-filter: drop-shadow(0 0px 10px #fff6a1);
+          filter: drop-shadow(0 0px 10px #fff6a1);
+}
+
+.board {
+  width: 80%;
+  text-align: center;
+}
+
+.user-box {
+  display: inline-block;
+}
+
+.bot-box {
+  display: inline-block;
+}
+
+.choices {
+  margin: 5.5rem 1rem;
+  padding: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-filter: contrast(145%);
+          filter: contrast(145%);
+  -webkit-animation: 'blur' 1000ms ease-in;
+          animation: 'blur' 1000ms ease-in;
+}
+
+.choices .choice {
+  cursor: pointer;
+  margin: 0 auto;
+  width: 100%;
+  padding: .7rem;
+  max-width: 205px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.choices .choice:hover {
+  -webkit-transform: scale(0.94);
+          transform: scale(0.94);
+}
+
+.choices img {
+  width: 100%;
+}
+
+@media screen and (min-width: 680px) {
+  .display {
+    font-size: 3em;
+  }
+  .display .middle #message {
+    font-size: 3.5rem;
+  }
+}
+
+.winner {
+  color: #67ec46;
+  -webkit-filter: drop-shadow(0 0px 10px #b0ff9c);
+          filter: drop-shadow(0 0px 10px #b0ff9c);
+}
+
+.loser {
+  color: #ff1500;
+  -webkit-filter: drop-shadow(0 0px 10px #ff4141);
+          filter: drop-shadow(0 0px 10px #ff4141);
+}
+
+.draw {
+  color: #131313;
+  -webkit-filter: drop-shadow(0 0px 10px white);
+          filter: drop-shadow(0 0px 10px white);
+}
+
+.winbg {
+  -webkit-animation: 'greenwin' 700ms ease;
+          animation: 'greenwin' 700ms ease;
+}
+
+.losebg {
+  -webkit-animation: 'redlose' 700ms ease;
+          animation: 'redlose' 700ms ease;
+}
+
+.drawbg {
+  -webkit-animation: 'greydraw' 700ms ease;
+          animation: 'greydraw' 700ms ease;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+@-webkit-keyframes greenwin {
+  0% {
+    background-color: #333;
+  }
+  20% {
+    background-color: #3d5026;
+  }
+  85% {
+    background-color: #394925;
+  }
+  100% {
+    background: #333;
+  }
+}
+
+@keyframes greenwin {
+  0% {
+    background-color: #333;
+  }
+  20% {
+    background-color: #3d5026;
+  }
+  85% {
+    background-color: #394925;
+  }
+  100% {
+    background: #333;
+  }
+}
+
+@-webkit-keyframes redlose {
+  0% {
+    background-color: #333;
+  }
+  20% {
+    background-color: #492525;
+  }
+  85% {
+    background-color: #492525;
+  }
+  100% {
+    background: #333;
+  }
+}
+
+@keyframes redlose {
+  0% {
+    background-color: #333;
+  }
+  20% {
+    background-color: #492525;
+  }
+  85% {
+    background-color: #492525;
+  }
+  100% {
+    background: #333;
+  }
+}
+
+@-webkit-keyframes greydraw {
+  0% {
+    background-color: #333;
+  }
+  20% {
+    background-color: #131313;
+  }
+  85% {
+    background-color: #131313;
+  }
+  100% {
+    background: #333;
+  }
+}
+
+@keyframes greydraw {
+  0% {
+    background-color: #333;
+  }
+  20% {
+    background-color: #131313;
+  }
+  85% {
+    background-color: #131313;
+  }
+  100% {
+    background: #333;
+  }
+}
+
+@-webkit-keyframes blur {
+  0% {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+
+@keyframes blur {
+  0% {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transform: translateY(500px);
+            transform: translateY(500px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+}
+/*# sourceMappingURL=main.css.map */

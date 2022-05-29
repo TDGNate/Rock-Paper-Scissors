@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Rock Paper Scissors</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<p>
+				Rock Paper Scissors by
+				<a
+					class="nate"
+					target="_blank"
+					href="https://tdgnate.github.io/Portfolio/"
+					>Nate</a
+				>
+			</p>
+		</header>
+
+		<main>
+			<div class="display">
+				<section class="user-box">
+					<div class="board">
+						<h1>You</h1>
+						<span id="user-score">0</span>
+					</div>
+				</section>
+
+				<div class="middle">
+					<h2 id="message">VS</h2>
+				</div>
+
+				<section class="bot-box">
+					<div class="board">
+						<h1>Bot</h1>
+						<span id="bot-score">0</span>
+					</div>
+				</section>
+			</div>
+
+			<div class="choices">
+				<div class="choice" id="r">
+					<img src="./rps images/rock.png" alt="rock" />
+				</div>
+				<div class="choice" id="p">
+					<img src="./rps images/paper.png" alt="paper" />
+				</div>
+				<div class="choice" id="s">
+					<img src="./rps images/scissors.png" alt="scissors" />
+				</div>
+			</div>
+			<footer>
+				<h3><a href="">Github Repo</a></h3>
+			</footer>
+		</main>
+	</body>
+</html>

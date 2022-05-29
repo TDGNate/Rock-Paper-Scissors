@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    font-family: 'Montserrat', sans-serif;
+    background-image: linear-gradient(to top, rgb(255, 179, 169), rgb(15, 15, 15));
+    height: 100vh;
+    // overflow: hidden;
+}
+
+header {
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    transition: 250ms ease-in;
+
+    &:hover {
+        background: rgba(0, 0, 0, .9);
+    }
+
+    p {
+        font-size: 1.7rem;
+        padding: 1rem;
+        align-self: center;
+        color: white;
+    }
+}
+
+main {
+    width: 100%;
+}
+
+a {
+    color: rgb(255, 251, 193);
+}
+
+.nate {
+    color: rgb(56, 165, 255);
+    text-decoration: none;
+}
+
+.nate:hover {
+    border-bottom: 1px solid rgb(56, 165, 255);
+}
+
+.display {
+    height: 35vh;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    grid-template-columns: 38% 24% 38%;
+    // overflow: hidden;
+
+    span {
+        color: white;
+        font-weight: bold;
+        padding: .2rem;
+        border-bottom: 2px solid white;
+    }
+
+    .middle {
+        color: rgb(253, 255, 157);
+
+        #message {
+            font-size: 2.5rem;
+            // color: rgb(255, 50, 50);
+            cursor: pointer;
+            transition: all 400ms ease;
+
+            &:hover {
+                color: rgb(255, 254, 242);
+                filter: drop-shadow(0 0px 10px rgb(255, 246, 161));
+            }
+        }
+    }
+}
+
+.board {
+    width: 80%;
+    text-align: center;
+}
+
+.user-box {
+    display: inline-block;
+}
+
+.bot-box {
+    display: inline-block;
+}
+
+.choices {
+    margin: 5.5rem 1rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    // border: 2px solid white;
+    text-align: center;
+    justify-content: center;
+    filter: contrast(145%);
+    animation: 'blur' 1000ms ease-in;
+
+    .choice {
+        cursor: pointer;
+        margin: 0 auto; 
+        width: 100%;
+        padding: .7rem;
+        max-width: 205px;
+        align-self: center;
+        transition: all 400ms ease;
+
+        &:hover {
+            transform: scale(.94);
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+
+
+@media screen and (min-width:680px) {
+    .display {
+        font-size: 3em;
+
+        .middle {
+            // font-size: 4rem;
+
+            #message {
+                font-size: 3.5rem;
+            }
+        }
+    }
+}
+
+
+
+// ---- Javascript addition ---- 
+
+
+// .winner {
+//     color: rgb(103, 236, 70);
+//     filter: drop-shadow(0 0px 10px rgb(176, 255, 156));
+// }
+// .loser {
+//     color: rgb(255, 54, 36);
+//     filter: drop-shadow(0 0px 10px rgb(255, 108, 108));
+// }
+
+.winner {
+    color: rgb(103, 236, 70);
+    filter: drop-shadow(0 0px 10px rgb(176, 255, 156));
+}
+.loser {
+    color: rgb(255, 21, 0);
+    filter: drop-shadow(0 0px 10px rgb(255, 65, 65));
+}
+.draw {
+    color: rgb(19, 19, 19);
+    filter: drop-shadow(0 0px 10px rgb(255, 255, 255));
+}
+.winbg {
+    animation: 'greenwin' 700ms ease;
+}
+.losebg {
+    animation: 'redlose' 700ms ease;
+}
+.drawbg {
+    animation: 'greydraw' 700ms ease;
+}
+
+// footer 
+
+footer {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+@keyframes greenwin {
+    0% {
+        background-color: #333;
+    }
+    20% {
+        background-color: rgb(61, 80, 38);
+    }
+    85% {
+        background-color: rgb(57, 73, 37);
+    }
+    100% {
+        background: #333;
+    }
+}
+@keyframes redlose {
+    0% {
+        background-color: #333;
+    }
+    20% {
+        background-color: rgb(73, 37, 37);
+    }
+    85% {
+        background-color: rgb(73, 37, 37);
+    }
+    100% {
+        background: #333;
+    }
+}
+@keyframes greydraw {
+    0% {
+        background-color: #333;
+    }
+    20% {
+        background-color: rgb(19, 19, 19);
+    }
+    85% {
+        background-color: rgb(19, 19, 19);
+    }
+    100% {
+        background: #333;
+    }
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(10px);
+        transform: translateY(500px);
+    }
+   100% {
+        filter: blur(0px);
+    }
+}
